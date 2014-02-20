@@ -86,6 +86,88 @@ array (size=10)
       'country' => string 'US' (length=2) 
 </pre>
 
+<h4>Get questions for verification:</h4>
+<pre>
+$this->load->library('BlockScore');
+$verification_id = '530539413066370002560000';
+$this->blockscore->questions($verification_id);
+</pre> 
+
+<h4>Result:</h4>
+<pre>
+array (size=3)
+  'verification_id' => string '530539413066370002560000' (length=24)
+  'question_set_id' => string '5305a6243066370002770000' (length=24)
+  'questions' => 
+    array (size=5)
+      0 => 
+        array (size=3)
+          'question' => string 'What state was your SSN issued in?' (length=34)
+          'id' => int 1
+          'answers' => 
+            array (size=5)
+              0 => 
+                array (size=2)
+                  'answer' => string 'Utah' (length=4)
+                  'answer_id' => int 1
+              1 => 
+                array (size=2)
+                  'answer' => string 'New Hampshire' (length=13)
+                  'answer_id' => null
+              2 => 
+                array (size=2)
+                  'answer' => string 'Delaware' (length=8)
+                  'answer_id' => int 3
+              3 => 
+                array (size=2)
+                  'answer' => string 'Oklahoma' (length=8)
+                  'answer_id' => int 4
+              4 => 
+                array (size=2)
+                  'answer' => string 'None Of The Above' (length=17)
+                  'answer_id' => int 5
+      // 4 more questions in the format above
+</pre>
+
+<h4>Get score from users input:</h4>
+<pre>
+$this->load->library('BlockScore');
+$user_input = '{
+   "verification_id":"530539413066370002560000",
+   "question_set_id":"5305a6243066370002770000",
+   "answers":[
+      {
+         "question_id":"1",
+         "answer_id":""
+      },
+      {
+         "question_id":"2",
+         "answer_id":""
+      },
+      {
+         "question_id":"3",
+         "answer_id":""
+      },
+      {
+         "question_id":"4",
+         "answer_id":""
+      },
+      {
+         "question_id":"5",
+         "answer_id":""
+      }
+   ]
+}';
+$this->blockscore->score($user_input);
+</pre>
+
+<h4>Result:</h4>
+<pre>
+array (size=2)
+  'question_set_id' => string '5305a6243066370002770000' (length=24)
+  'score' => float 0
+</pre>
+
 License
 -------------
 The MIT License (MIT)
