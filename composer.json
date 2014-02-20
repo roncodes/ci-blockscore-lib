@@ -1,21 +1,42 @@
 {
-    "name": "blockscore/blockscore",
-    "type": "library",
-    "description": "BlockScore provides a fast and accurate identity verification API. Implement knowledge-based authentication and verification in minutes and start verifying your customers.",
-    "keywords": ["identity verification", "international verification", "identity api", "identity verification service", "identity verification api"],
-    "homepage": "http://www.blockscore.com",
-    "license": "MIT",
-    "authors": [
+    "repositories": [
         {
-            "name": "Ronald A. Richardson",
-            "email": "me@ronaldarichardson.com",
-            "homepage": "http://www.ronaldarichardson.com/"
+            "type": "package",
+            "package": {
+                "name": "Sutracamp/ci-blockscore-lib",
+                "type": "library",
+                "description": "BlockScore provides a fast and accurate identity verification API. Implement knowledge-based authentication and verification in minutes and start verifying your customers.",
+                "keywords": [
+                    "identity verification",
+                    "international verification",
+                    "identity api",
+                    "identity verification service",
+                    "identity verification api"
+                ],
+                "homepage": "http://www.blockscore.com",
+                "license": "MIT",
+                "version": "master",
+                "source": {
+                    "url": "git@github.com:Sutracamp/ci-blockscore-lib.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "authors": [
+                    {
+                        "name": "Ronald A. Richardson",
+                        "email": "me@ronaldarichardson.com",
+                        "homepage": "http://www.ronaldarichardson.com/"
+                    }
+                ],
+                "autoload": {
+                    "psr-0": {
+                        "Sutracamp\\BlockScore": "libraries"
+                    }
+                },
+                "require": {
+                    "guzzle/guzzle": "~3.7"
+                }
+            }
         }
-    ],
-    "autoload": {
-        "psr-0": { "": "libraries/" }
-    },
-    "require": {
-        "guzzle/guzzle": "~3.7"
-    }
+    ]
 }
