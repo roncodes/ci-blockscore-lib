@@ -52,8 +52,8 @@ $person = array(
         'country' => 'US'
     ),
     'identification' => array(
-        'ssn' => '0000' // or 'passport' => 'XXXXXXX', 'gender' => 'male'
-    )
+        'ssn' => '0000' 
+    ) // or for international array('passport' => 'XXXXXXX', 'gender' => 'male')
 );
 $this->blockscore->verification($person);
 </pre>   
