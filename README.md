@@ -18,7 +18,7 @@ Edit `composer.json`:
 ```json
 {
     "require": {
-        "Sutracamp/ci-blockscore-lib": "1.*"
+        "roncodes/ci-blockscore-lib": "1.*"
     }
 }
 ```
