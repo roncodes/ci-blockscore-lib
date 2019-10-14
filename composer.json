@@ -3,7 +3,7 @@
         {
             "type": "package",
             "package": {
-                "name": "Sutracamp/ci-blockscore-lib",
+                "name": "roncodes/ci-blockscore-lib",
                 "type": "library",
                 "description": "BlockScore provides a fast and accurate identity verification API. Implement knowledge-based authentication and verification in minutes and start verifying your customers.",
                 "keywords": [
